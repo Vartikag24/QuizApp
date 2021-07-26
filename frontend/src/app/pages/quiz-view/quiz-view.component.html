@@ -1,0 +1,41 @@
+<div class="centered-content">
+    <div class="quiz-container">
+
+        <div class="sidebar has-background-white">
+            <h1 class="title has-text-primary">
+                Quizzes
+            </h1>
+            <div class="list-menu">
+ 
+                <a class="list-menu-item" *ngFor="let quiz of quizzes" [routerLink]= "['/quizzes', quiz._id]" routerLinkActive="is-active">
+                    <p>{{ quiz.title }}</p>
+                </a>
+
+            </div>
+
+            <button class="button is-primary has-text-white" routerLink="/new-quiz">+ New Quiz</button>
+
+        </div>
+
+        <div class="questions-list-container has-background-light">
+            <h1 class="title has-text-primary">
+                Questions
+            </h1>
+            <!-- Question Elements -->
+            <div class="question" *ngFor="let question of questions">
+                <p>{{ question.title }}</p><br>
+                <p>a){{ question.answers[0] }}</p>
+                <p>b){{ question.answers[1] }}</p>
+                <p>c){{ question.answers[2] }}</p>
+                <p>d){{ question.answers[3] }}</p>
+                <p>Correct answer: {{ question.correctAns }}</p>
+            </div>
+            <div class="buttons is-right">
+                <button routerLink="./new-question" class="circle-add-button button is-primary">
+                    <img src="../../../assets/plus-icon.svg">
+                </button>
+            </div>   
+        </div>
+
+    </div>
+</div>

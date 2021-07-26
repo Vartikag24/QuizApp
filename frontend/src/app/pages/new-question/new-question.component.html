@@ -1,0 +1,25 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+        Add a new question
+        </h1>
+        <input #questionTitleInput class="input has-background-light is-medium" type="text" placeholder="Enter question...">
+        <br><br>
+        <input #answer1Input class="input has-background-light is-medium" type="text" placeholder="Enter option A...">
+        <br><br>
+        <input #answer2Input class="input has-background-light is-medium" type="text" placeholder="Enter option B...">
+        <br><br>
+        <input #answer3Input class="input has-background-light is-medium" type="text" placeholder="Enter option C...">
+        <br><br>
+        <input #answer4Input class="input has-background-light is-medium" type="text" placeholder="Enter option D...">
+        <br><br>
+        <input #correctAnsInput class="input has-background-light is-medium" type="text" placeholder="Enter correct answer...">
+        <br><br>
+        <div class="buttons is-right">
+            <button class="button is-medium" routerLink="/">Cancel</button>
+            <button class="button is-primary has-text-white is-medium" (click)="addQuestion(questionTitleInput.value, 
+            [answer1Input.value, answer2Input.value, answer3Input.value, answer4Input.value], correctAnsInput.value)">Add</button>
+        </div>
+      
+    </div>
+</div>
